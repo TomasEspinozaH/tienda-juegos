@@ -18,6 +18,10 @@ from django.urls import path
 from core import views
 
 urlpatterns = [
-    path('', views.index),
-    path('admin/', admin.site.urls),
+  path('', views.index, name="home"),
+  path('juegos/', views.games, name="games"),
+  path('tarjeta-regalo/', views.gifcard, name="gifcard"),
+  path('form/', views.form, name="form"),
+  path('base', views.base),
+  path('admin/', admin.site.urls),
 ]
