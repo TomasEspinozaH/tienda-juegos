@@ -22,9 +22,9 @@
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
         <nav  id="menu" class="navbar navbar-expand-sm navbar-dark">
-          <a href="index.html" class="navbar-brand"><img src="{% static 'core/img/icono_recortado.jpeg' %}" alt="Icono Pagina"></a>
+          <a href="{% url 'home' %}" class="navbar-brand"><img src="{% static 'core/img/icono_recortado.jpeg' %}" alt="Icono Pagina"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#uno">
-            <span  class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="uno" >
             <ul class="navbar-nav">
@@ -40,14 +40,14 @@
   <!--Fin-Menu-->
 
   <main class="main-container" style="width: 100%">
-    {% block content %} {% endblock %}
+    {% block content %}{% endblock %}
   </main>
 
   <!--Pie-Pagina-->
   <footer class="container-fluid">
       <div class="row">
         <div class="d-none d-md-block col-md-6 col-lg-6 col-xl-6 text-left">
-            <img id="metodo" src="img/metodo_pago5.png" class="img-fluid" alt="">
+            <img id="metodo" src="{% static 'core/img/metodo_pago5.png' %}" class="img-fluid" alt="">
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-right">
           <h6 class="text-muted lead">Nuestras Redes</h6>

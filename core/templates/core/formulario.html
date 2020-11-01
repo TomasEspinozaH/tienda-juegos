@@ -17,18 +17,18 @@
     <article>
       <div class="row">
         <div  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <form id="mi-formulario" action="index.html" >  
+          <form id="mi-formulario" method="post" action="{% url 'home' %}"> {% csrf_token %}  
             <label>Nombres: </label>
-            <input type="text" name="nombre" minlength="2" required>
+            <input type="text" name="nombre" minlength="2" required placeholder="Juanito">
 
             <label>Apellidos: </label>
-            <input type="text" name="apellido" minlength="2" required>
+            <input type="text" name="apellido" minlength="2" required placeholder="Perez">
             
             <label>Correo Electrónico: </label>
             <input type="text" name="email" required placeholder="nombre@dominio.cl">
         
             <label>Telefono: </label>
-            <input type="text" name="fono" minlength="9" required>
+            <input type="text" name="fono" minlength="9" required placeholder="912345678">
         
             <label>Fecha Nacimiento: </label>
             <input type="date" name="fecha" min="1900-01-01" required>
